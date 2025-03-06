@@ -1,45 +1,45 @@
-export class ContaBancaria {
-  private saldo: number;
-  private titular: string;
-  private numeroDaConta: number;
+export class BankAccount {
+  private balance: number;
+  private holder: string;
+  private AccountNumber: number;
 
-  constructor(saldo: number, titular: string, numeroDaConta: number) {
-    this.saldo = saldo;
-    this.titular = titular;
-    this.numeroDaConta = numeroDaConta;
+  constructor(balance: number, holder: string, accountNumber: number) {
+    this.balance = balance;
+    this.holder = holder;
+    this.AccountNumber = accountNumber;
   }
 
-  depositarValor(valor: number): void {
-    if (valor > 0) {
-      this.saldo += valor;
-      console.log(`Depositado ${valor}. Seu novo saldo é: ${this.saldo}.`);
+  depositValue(value: number): void {
+    if (value > 0) {
+      this.balance += value;
+      console.log(`Depositado ${value}. Seu novo saldo é: ${this.balance}.`);
     } else {
       console.log("O valor do depósito deve ser positivo.");
     }
   }
 
-  sacarValor(valor: number): void {
-    if (valor > 0 && valor <= this.saldo) {
-      this.saldo -= valor;
-      console.log(`Sacado ${valor}. Novo saldo é ${this.saldo}.`);
+  withdrawValue(value: number): void {
+    if (value > 0 && value <= this.balance) {
+      this.balance -= value;
+      console.log(`Sacado ${value}. Novo saldo é ${this.balance}.`);
     } else {
       console.log("Valor de saque inválido.");
     }
   }
 
-  verSaldo(): void {
-    console.log(`O saldo atual é ${this.saldo}.`);
+  seeBalance(): void {
+    console.log(`O saldo atual é ${this.balance}.`);
   }
 
-  getSaldo(): number {
-    return this.saldo;
+  getBalance(): number {
+    return this.balance;
   }
 
-  getTitular(): string {
-    return this.titular;
+  getHolder(): string {
+    return this.holder;
   }
 
-  getNumeroDaConta(): number {
-    return this.numeroDaConta;
+  getAccountNumber(): number {
+    return this.AccountNumber;
   }
 }
