@@ -13,7 +13,7 @@ bank.addAccount(conta3);
 // Listando todas as contas
 bank.listAccounts();
 //buscando uma conta expecifica
-const accountFound = bank.searchAccounts(2);
+const accountFound = bank.searchAccounts(22);
 if (accountFound) {
     console.log(`Conta encontrada! Titular: ${accountFound.getHolder()}, Saldo: R$${accountFound.getBalance()}`);
 }
