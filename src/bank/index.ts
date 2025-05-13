@@ -17,7 +17,7 @@ export class Bank {
   }
 
   // listar contas
-  listAccounts(): void {
+  listAccounts(): void { // quando nao tem return
     console.log("lista de todas as contas: ");
     this.account.forEach((account) => {
       console.log(

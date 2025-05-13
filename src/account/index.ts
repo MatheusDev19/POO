@@ -32,7 +32,7 @@ export class BankAccount {
   }
 
   getBalance(): number {
-    return this.balance;
+    return this.balance
   }
 
   getHolder(): string {
